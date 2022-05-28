@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class MemberDAO {
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -51,6 +52,30 @@ public class MemberDAO {
 		}// finally
 		return dto;
 	}// verifyMember
+	
+	// 오늘의 팁 가지고 옴
+	public ArrayList<String> selectTodayTip(){
+		ArrayList<String> list = new ArrayList<>();
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String sql = "SELECT TIP FROM LITH.TODAYTIP";
+		try {
+			conn = getConnection();
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				String tip = rs.getString("TIP");
+				list.add(tip);
+			}
+		} catch(Exception e) {
+			System.out.println("selectTodayTip 에러 : " + e);
+		} finally {
+			close(conn, ps, rs);
+		}
+		return list;
+	}
+	// selectTodayTip
 	
 	// close with 2 parameters
 	private void close(Connection conn, PreparedStatement ps) {
