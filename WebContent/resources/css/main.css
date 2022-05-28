@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url('../image/mainbanner.jpeg') no-repeat;
+    background-size: 100%;
+    background-color: #1A1A3A;
+}
+
+.header{
+	text-align: center;
+	width: 100%;
+}
+
+.header #welcome{
+	margin: auto;
+	font-size: 80px;
+	color: white;
+}
+
+.header #info{
+	margin: auto;
+	font-size: 20px;
+	color: white;
+}
+
+.userInfo{
+	text-align: center;
+	background-color: white;
+	margin: 20px;
+	width: 200px;
+	height: 170px;
+	border: none;
+	border-radius: 5px;
+}
