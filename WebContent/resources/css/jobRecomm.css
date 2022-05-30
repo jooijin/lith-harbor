@@ -1,0 +1,110 @@
+/*https://codepen.io/tobiasdev/pen/XgegoO 참고하여 작성 */
+
+@charset "UTF-8";
+
+* {
+	font-family: 'Poppins', sans-serif;
+	border-radius: 5px;
+}
+
+/* Containers */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: url('../image/mainbanner.jpeg') no-repeat;
+  background-size: 100%;
+  background-color: #1A1A3A;
+}
+
+.rb-box {
+  width: 80%;
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 1.3em;
+  background: white;
+  border-radius: .75em;
+  -webkit-filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+  filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+  box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.3);
+}
+
+/* Custom Radio Button */
+p {
+  font-size: .9em;
+}
+
+.rb {
+  padding: 16px 0;
+  text-align: center;
+  border: 1px solid #1A1A3A;
+  border-radius: .3em;
+}
+
+.rb-tab {
+  display: inline-block;
+  position: relative;
+  width: 15%;
+}
+
+.rb-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .5em;
+}
+
+.rb-spot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: ease .5s;
+}
+
+.rb-tab-active .rb-spot {
+  border: 2px solid #1A1A3A;
+}
+
+/* Submit Button */
+.button-box {
+  padding: 10px 0;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  width: 80%;
+  margin-top: 1.2em;
+  padding: 1em;
+  max-width: 220px;
+  font-size: .9em;
+  color: #1A1A3A;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .15em;
+  background: white;
+  border: none;
+  outline: none;
+  border-radius: 5em;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  transition: 
+    color 0.6s, 
+    box-shadow 0.3s, 
+    transform 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  color: #1A1A3A;
+}

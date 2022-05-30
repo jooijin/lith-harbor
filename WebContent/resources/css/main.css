@@ -5,42 +5,42 @@
 	border-radius: 5px;
 }
 
-body{
-    background: url('../image/mainbanner.jpeg') no-repeat;
-    background-size: 100%;
-    background-color: #1A1A3A;
+body {
+	background: url('../image/mainbanner.jpeg') no-repeat;
+	background-size: 100%;
+	background-color: #1A1A3A;
 }
 
-.wrapper{
+.wrapper {
 	width: 1080px;
 	hegith: 2000px;
 	margin: auto;
 }
 
-.header{
+.header {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	text-align: center;
 	width: 100%;
 }
 
-.header #welcome{
+.header #welcome {
 	margin: auto;
 	font-size: 80px;
 	color: white;
 }
 
-.header #info{
+.header #info {
 	margin: auto;
 	font-size: 20px;
 	color: white;
 }
 
-.uppermenu{
+.uppermenu {
 	text-align: center;
 }
 
-.userInfo{
+.userInfo {
 	width: 200px;
 	height: 170px;
 	margin: 0 20px 0 20px;
@@ -50,9 +50,9 @@ body{
 	background-color: white;
 }
 
-.todaymaple{
+.todaymaple {
 	backdrop-filter: blur(10px);
-    box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.3);
+	box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
 	width: 560px;
 	height: 170px;
 	margin: 0 20px 0 20px;
@@ -60,19 +60,19 @@ body{
 	color: white;
 }
 
-.todaymaple .tiptitle{
+.todaymaple .tiptitle {
 	font-size: 30px;
 	margin-top: 20px;
 	display: inline-block;
 }
 
-.todaymaple .tipcontent{
+.todaymaple .tipcontent {
 	font-size: 20px;
 	margin-top: 10px;
 	display: inline-block;
 }
 
-.recommend{
+.recommend {
 	background: url('../image/recom.png') no-repeat;
 	background-size: 100%;
 	width: 200px;
@@ -83,7 +83,7 @@ body{
 	cursor: pointer;
 }
 
-.recommend > p{
+.recommend>p {
 	display: none;
 	position: absolute;
 	top: 0px;
@@ -112,11 +112,11 @@ body{
 	display: block;
 }
 
-.recommend:hover > p {
+.recommend:hover>p {
 	display: block;
 }
 
-.board{
+.board {
 	background-color: yellow;
 	margin: 20px;
 	margin-top: 20px;
@@ -126,11 +126,11 @@ body{
 	clear: both;
 }
 
-.bottommenu{
+.bottommenu {
 	text-align: center;
 }
 
-.market{
+.market {
 	background-color: green;
 	width: 200px;
 	height: 170px;
@@ -138,7 +138,7 @@ body{
 	float: left;
 }
 
-.lucky{
+.lucky {
 	background-color: blue;
 	width: 380px;
 	height: 170px;
@@ -146,7 +146,22 @@ body{
 	float: left;
 }
 
-.calculator{
+#my_modal {
+	display: none;
+	width: 300px;
+	padding: 20px 60px;
+	background-color: #fefefe;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
+
+#my_modal .modal_close_btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.calculator {
 	background-color: navy;
 	width: 380px;
 	height: 170px;
@@ -154,12 +169,12 @@ body{
 	float: left;
 }
 
-.footer{
+.footer {
 	color: white;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	display: inline-block;
 	text-align: center;
 	width: 100%;
-	clear:both;
+	clear: both;
 }

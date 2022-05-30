@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class MemberDAO {
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://localhost:3307/lith?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
+	private static final String URL = "jdbc:mysql://localhost:3306/lith?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 	private static final String USER = "root";
 	private static final String PASS = "1234";
 	
