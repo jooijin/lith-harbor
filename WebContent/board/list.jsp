@@ -10,9 +10,13 @@
 <meta charset="UTF-8">
 <%
 	int pg = 1;
-	String strPg = request.getParameter("pg"); // list.jsp?pg=3
-	if(strPg != null) {
-		pg = Integer.parseInt(strPg);
+	try{
+		String strPg = request.getParameter("pg"); // list.jsp?pg=3
+		if(strPg != null) {
+			pg = Integer.parseInt(strPg);
+		}
+	} catch(Exception e){
+		//
 	}
 	int size = 10; // 한 페이지에 보여줄 글의 수
 	int begin = (pg-1) * size; // 시작 글번호, MySQL은 시작글번호가 0부터 시작

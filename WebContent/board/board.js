@@ -46,7 +46,9 @@ $(function(){
 	});
 	//목록으로
 	$("#back").on('click', function(){
-		history.back();
+		var num = $("#num").val();
+		var pg = $("#pg").val();
+		location.href = "list.jsp?num=" + num + "&pg=" + pg;
 	});
 });
 

@@ -31,7 +31,7 @@
 %>
 <input type="button" value="Sign Out" id="sign_out">
 	<div class="rb-box">
-		<a href="main.js" style="color:black;">메인화면으로 돌아가기</a>
+		<a href="main.jsp" style="color:black;">메인화면으로 돌아가기</a>
 		<!-- Radio Button Module -->
 		<p>1. 장거리 공격 VS 단거리 공격 중 어느 것을 선호하시나요? (1:단거리 ~ 5:장거리)</p>
 		<div id="rb-1" class="rb">

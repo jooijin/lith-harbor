@@ -27,7 +27,7 @@ public class BoardDAO {
 		int ok = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "insert into board(title,id,content) values(?,?,?)";
+		String sql = "insert into lith.board(title,id,content) values(?,?,?)";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -48,7 +48,7 @@ public class BoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "SELECT num,title,regdate,hit FROM board ORDER BY num DESC";
+		String sql = "SELECT num,title,regdate,hit FROM lith.board ORDER BY num DESC";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -78,7 +78,7 @@ public class BoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "SELECT num,title,id,content,regdate,hit FROM board WHERE num=?";
+		String sql = "SELECT num,title,id,content,regdate,hit FROM lith.board WHERE num=?";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -109,7 +109,7 @@ public class BoardDAO {
 	public void updateHit(int num) {
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "UPDATE board SET hit=hit+1 WHERE num=?";
+		String sql = "UPDATE lith.board SET hit=hit+1 WHERE num=?";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -126,7 +126,7 @@ public class BoardDAO {
 		int ok = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "UPDATE board SET title=?, id=?, content=? WHERE num=?";
+		String sql = "UPDATE lith.board SET title=?, id=?, content=? WHERE num=?";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -147,7 +147,7 @@ public class BoardDAO {
 		int ok = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "DELETE FROM board WHERE num=?";
+		String sql = "DELETE FROM lith.board WHERE num=?";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -188,7 +188,7 @@ public class BoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "SELECT num,title,regdate,hit FROM board order by num desc LIMIT ?,?";
+		String sql = "SELECT num,title,regdate,hit FROM lith.board order by num desc LIMIT ?,?";
 		try{
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -220,7 +220,7 @@ public class BoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "SELECT num,title,regdate,hit FROM board ORDER BY hit DESC, num DESC LIMIT 1,10";
+		String sql = "SELECT num,title,regdate,hit FROM lith.board ORDER BY hit DESC, num DESC LIMIT 1,10";
 		try {
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);
@@ -251,7 +251,7 @@ public class BoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "SELECT count(*) cnt FROM board";
+		String sql = "SELECT count(*) cnt FROM lith.board";
 		try{
 			conn = getConnection();
 			ps = conn.prepareStatement(sql);

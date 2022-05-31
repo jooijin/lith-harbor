@@ -45,17 +45,39 @@ form{
 	background-color: #1A1A3A;
 }
 
+#pwd{
+	width: 250px;
+	height: 40px;
+}
+
 .contentWrap{
 	margin: 0px;
 	padding: 20px;
 	height: 70px;
-	border: 1px solid white;	
+	border: 1px solid white;
+	box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);	
 }
 
 .buttonGroup{
 	height: 70px;	
 	border: 1px solid white;
 	background-color: #1A1A3A;
+	box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttonGroup > div{
+	width: 100px;
+	height: 40px;
+	margin: 15px;
+	font-size: 15px;
+	background-color: white;
+	border: none;
+	cursor: pointer;
+	color: black;
+	text-align: center;
+	float: left;
+	line-height: 40px;
+	box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
 }
 
 .footer {

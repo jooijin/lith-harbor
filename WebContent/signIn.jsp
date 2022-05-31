@@ -23,7 +23,6 @@
 		</div>
 		<div class="buttonGroup">
 			<input type="button" value="Sign In" id="sign_in">
-			<input type="button" value="Sign Up" id="sign_up">
 		</div>
 	</form>
 </div>

@@ -38,8 +38,8 @@
 			<div><textarea rows="5" cols="30" name="content" id="content"></textarea></div>
 		</div>
 		<div class="buttonGroup">
-			<input type="button" value="쓰기" id="btn_write">
-			<input type="reset" value="취소" id="backtolist">
+			<div id="btn_write">등록</div>
+			<div id="backtolist">취소</div>
 		</div>
 	</form>
 	<div class="footer">Copyright © 2022 Ijin Joo</div>

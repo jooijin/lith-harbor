@@ -3,12 +3,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	int pg = 1; int num = 1; //인기글에서 넘어오는 경우 그냥 첫페이지로 가게
-	String strPg = request.getParameter("pg"); // read.jsp?num=304&pg=1
-	if(!strPg.equals(""))
-		pg = Integer.parseInt(strPg);
-	String strNum = request.getParameter("num"); // read.jsp?num=2
-	if(!strNum.equals(""))
-		num = Integer.parseInt(strNum); // "2" ==> 2
+	try{
+		String strPg = request.getParameter("pg"); // read.jsp?num=304&pg=1
+		if(!strPg.equals("") && strPg != null)
+			pg = Integer.parseInt(strPg);
+		String strNum = request.getParameter("num"); // read.jsp?num=2
+		if(!strNum.equals("") && strNum != null)
+			num = Integer.parseInt(strNum); // "2" ==> 2
+	} catch(Exception e){
+		//
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -50,8 +54,8 @@
 				<input type="password" name="pwd" id="pwd">
 			</div>
 			<div class="buttonGroup">
-				<input type="button" value="삭제" id="btn_del"> 
-				<input type="button" value="취소" id="back">
+				<div id="btn_del">삭제</div>
+				<div id="back">취소</div>
 			</div>
 		</form>
 		<div class="footer">Copyright © 2022 Ijin Joo</div>

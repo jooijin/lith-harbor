@@ -5,12 +5,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
 	int pg = 1; int num = 1; //인기글에서 넘어오는 경우 그냥 첫페이지로 가게
-	String strPg = request.getParameter("pg"); // read.jsp?num=304&pg=1
-	if(!strPg.equals(""))
-		pg = Integer.parseInt(strPg);
-	String strNum = request.getParameter("num"); // read.jsp?num=2
-	if(!strNum.equals(""))
-		num = Integer.parseInt(strNum); // "2" ==> 2
+	try{
+		String strPg = request.getParameter("pg"); // read.jsp?num=304&pg=1
+		if(!strPg.equals("") && strPg != null)
+			pg = Integer.parseInt(strPg);
+		String strNum = request.getParameter("num"); // read.jsp?num=2
+		if(!strNum.equals("") && strNum != null)
+			num = Integer.parseInt(strNum); // "2" ==> 2
+	} catch(Exception e){
+		//
+	}
 	BoardDAO dao = new BoardDAO();
 	BoardDTO dto = dao.boardRead(num);
 %>
@@ -62,9 +66,8 @@
 		<div><textarea rows="5" cols="30" name="content" id="content">${b.content}</textarea></div>
 	</div>
 	<div class="buttonGroup">
-		<input type="button" value="수정" id="btn_up">
-		<input type="reset" value="취소">
-		<input type="button" value="돌아가기" id="back">
+		<div id="btn_up">수정</div>
+		<div id="back">취소</div>
 	</div>
 </form>
 <div class="footer">Copyright © 2022 Ijin Joo</div>
