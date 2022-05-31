@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class MemberDAO {
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://localhost:3306/lith?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
+	private static final String URL = "jdbc:mysql://localhost:3307/lith?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 	private static final String USER = "root";
 	private static final String PASS = "1234";
 	
@@ -76,6 +76,49 @@ public class MemberDAO {
 		return list;
 	}
 	// selectTodayTip
+	
+	// 메소 당첨금 더하기
+	public int mesoPlus(int meso, String id) {
+		int cnt = 0;
+		Connection conn = null;
+		PreparedStatement ps = null;
+		String sql = "UPDATE LITH.MEMBER SET MESO = MESO+? WHERE ID=?";
+		try {
+			conn = getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, meso);
+			ps.setString(2, id);
+			cnt = ps.executeUpdate();
+		} catch(Exception e) {
+			System.out.println("mesoPlus 에러 : " + e);
+		} finally {
+			close(conn, ps);
+		}
+		return cnt;
+	}
+	
+	// 업데이트 된 메소값 select
+	public int selectMeso(String id){
+		int meso = 0;
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String sql = "SELECT MESO FROM LITH.MEMBER WHERE ID=?";
+		try {
+			conn = getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				meso = rs.getInt("MESO");
+			}
+		} catch(Exception e) {
+			System.out.println("selectMeso 에러 : " + e);
+		} finally {
+			close(conn, ps, rs);
+		}
+		return meso;
+	}
 	
 	// close with 2 parameters
 	private void close(Connection conn, PreparedStatement ps) {

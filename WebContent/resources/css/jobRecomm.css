@@ -36,6 +36,17 @@ p {
   font-size: .9em;
 }
 
+#sign_out{
+	float: right;
+	width: 120px;
+	font-size: 20px;
+	margin: 5px;
+	border: 2px solid;
+	cursor: pointer;
+	background-color:transparent;
+	color: white;
+}
+
 .rb {
   padding: 16px 0;
   text-align: center;

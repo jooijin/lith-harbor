@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Poppins', sans-serif;
+	border-radius: 5px;
+}
+
+#sign_out{
+	float: right;
+	width: 120px;
+	font-size: 20px;
+	margin: 5px;
+	border: 2px solid;
+	cursor: pointer;
+	background-color:transparent;
+	color: white;
+}
+
+body {
+	background: url('../../image/mainbanner.jpeg') no-repeat;
+	background-size: 100%;
+	background-color: #1A1A3A;
+}
+
+.header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	width: 100%;
+	font-size: 80px;
+	color: white;
+}
+
+.wrapper {
+	width: 1080px;
+	height: 800px;
+	margin: auto;
+}
+
+form{
+	width: 1080px;
+	height: 140px;
+	color: white;
+	font-size: 20px;
+	background-color: #1A1A3A;
+}
+
+.contentWrap{
+	margin: 0px;
+	padding: 20px;
+	height: 70px;
+	border: 1px solid white;	
+}
+
+.buttonGroup{
+	height: 70px;	
+	border: 1px solid white;
+	background-color: #1A1A3A;
+}
+
+.footer {
+	color: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	clear: both;
+}

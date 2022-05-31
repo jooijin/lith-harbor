@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Poppins', sans-serif;
+	border-radius: 5px;
+}
+
+a{
+	color: white;
+}
+
+#sign_out{
+	float: right;
+	width: 120px;
+	font-size: 20px;
+	margin: 5px;
+	border: 2px solid;
+	cursor: pointer;
+	background-color:transparent;
+	color: white;
+}
+
+body {
+	background: url('../../image/mainbanner.jpeg') no-repeat;
+	background-size: 100%;
+	background-color: #1A1A3A;
+}
+
+.header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	width: 100%;
+	font-size: 80px;
+	color: white;
+}
+
+.wrapper {
+	width: 1080px;
+	height: 800px;
+	margin: auto;
+	color: white;
+}
+
+.titleWrap{
+	align: center;
+	width: 1080px;
+	background-color: #1A1A3A;
+	height: 70px;	
+	border: 1px solid white;
+}
+
+.titleWrap div{
+	line-height: 70px;
+	display: inline-block;	
+}
+
+.titleWrap a{
+	width: 900px;
+	height: 30px;
+	margin-left: 30px;	
+}
+
+table{
+	background-color: #1A1A3A;
+	border: white;
+	text-align: center;
+	width: 1080px;
+}
+
+tr{
+	height: 50px;
+}
+
+.buttonGroup{
+	width: 1080px;
+	text-align: center;
+	height: 70px;	
+	border: 1px solid white;
+	background-color: #1A1A3A;
+	clear: both;
+}
+
+.footer {
+	color: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	clear: both;
+}
