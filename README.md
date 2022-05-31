@@ -1,26 +1,25 @@
 # lith-harbor
 
-[ 기본 설정 ]
-
-JRE 8
-APACHE TOMCAT 9.0
-DATABASE LITH
-DATEBASE 값 insert 스크립트: 최상단 디렉토리의 DBscript.sql
-localhost:8090/lith_harbor -> 로그인 페이지로 연결
-
-
-[ 메인화면 설명]
-
-우측 상단: 로그아웃 버튼
-오늘의 팁: 새로고침 시 업데이트됨
-오늘의 팁 옆의 몬스터 로고 클릭: 메이플 직업 추천 화면으로 연결
-인기글: 조회수 순으로 정렬된 글 목록, 클릭시 게시판으로 이동
-지금 바로 게임하러가기 클릭: 메이플 공식 페이지로 연결
-I'm feeling lucky!: 추첨을 통해 랜덤하게 메소 지급, member 테이블 업데이트됨
+<기본 설정>
+- JRE 8
+- APACHE TOMCAT 9.0
+- DATABASE LITH
+- DATEBASE 값 insert 스크립트: 최상단 디렉토리의 DBscript.sql
+- localhost:8090/lith_harbor -> 로그인 페이지로 연결
 
 
+<메인화면 설명>
 
-[ 테이블 생성 ]
+- 우측 상단: 로그아웃 버튼
+- 오늘의 팁: 새로고침 시 업데이트됨
+- 오늘의 팁 옆의 몬스터 로고 클릭: 메이플 직업 추천 화면으로 연결
+- 인기글: 조회수 순으로 정렬된 글 목록, 클릭시 게시판으로 이동
+- 지금 바로 게임하러가기 클릭: 메이플 공식 페이지로 연결
+- I'm feeling lucky!: 추첨을 통해 랜덤하게 메소 지급, member 테이블 업데이트됨
+
+
+
+<테이블 생성>
 
 create table lith.member(
 	id varchar(20) not null,
@@ -50,7 +49,7 @@ create table lith.board(
 
 
 
-[ URL 설계 ]
+<URL 설계>
 
 1. 로그인: signIn.jsp, loginVerify.jsp
 2. 로그아웃: signOut.jsp
