@@ -20,7 +20,7 @@
 
 
 <테이블 생성>
-
+```
 create table lith.member(
 	id varchar(20) not null,
 	pwd varchar(20) not null,
@@ -29,14 +29,15 @@ create table lith.member(
 	meso int default 0,
 	primary key(id)
 )
-
-
+```
+```
 create table lith.todaytip(
 	tipnum int not null auto_increment,
 	tip varchar(100) not null,
 	primary key(tipnum)
 )
-
+```
+```
 create table lith.board(
 	num int not null auto_increment,
 	title varchar(30) not null,
@@ -46,7 +47,7 @@ create table lith.board(
 	hit int not null default 0,
 	primary key(num)
 );
-
+```
 
 
 <URL 설계>
